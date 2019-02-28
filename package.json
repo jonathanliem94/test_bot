@@ -1,0 +1,25 @@
+{
+  "name": "test_bot",
+  "version": "1.0.0",
+  "description": "An exploratory foray into bot making",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jonathan Liem",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "eslint": "^5.14.1",
+    "moment": "^2.24.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanliem94/test_bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonathanliem94/test_bot/issues"
+  },
+  "homepage": "https://github.com/jonathanliem94/test_bot#readme"
+}
