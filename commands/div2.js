@@ -5,6 +5,7 @@ module.exports = {
 	description: 'Countdown to the release of the Division 2',
 	usage: '[command name]',
 	cooldown: 25,
+	// eslint-disable-next-line no-unused-vars
 	execute(message, args) {
 		const releasedate = moment('2019-03-16 00:00:00');
 

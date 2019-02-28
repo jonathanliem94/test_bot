@@ -19,6 +19,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
+	client.user.setActivity('<activity>', { type: 'ACTIVE' });
 
 	// COMMAND PARSING
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
