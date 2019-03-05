@@ -1,13 +1,14 @@
-## Test discord bot
+# Test discord bot
 
 A personal project that aims to learn how to make use of Discord.js and learning to use Javascript.
 
-# Required setup step
+## Required setup step
 1. Git clone this repo
-2. ` npm init `
-3. ` npm install discord.js `
+2. Change your working directory to /test_bot/
+3. ` npm init `
+4. ` npm install discord.js `
 
-# Please add:
+## Please add:
 + A config.json file containing the prefix and your bot token, if you want to use this.
 ```
 {
@@ -17,5 +18,5 @@ A personal project that aims to learn how to make use of Discord.js and learning
 ```
 
 
-# Dependencies:
+## Dependencies:
 + Moment (for date and time)
