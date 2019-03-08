@@ -7,7 +7,7 @@ module.exports = {
 	cooldown: 25,
 	// eslint-disable-next-line no-unused-vars
 	execute(message, args) {
-		const releasedate = moment('2019-03-16 00:00:00');
+		const releasedate = moment('2019-03-12 00:00:00');
 
 		var difference;
 		var days;
@@ -28,6 +28,7 @@ module.exports = {
 		difference = difference.subtract(hours, 'h');
 		minutes = difference.get('minutes');
 
-		message.channel.send('The Division 2 is releasing in ' + days + ' days, ' + hours + ' hours, ' + minutes + ' minutes. Assuming 16 March 00:00 GMT+8 Release.');
+		message.channel.send('The Division 2 is releasing in ' + days + ' days, ' + hours + ' hours, ' + minutes + ' minutes. \
+		Assuming 12 March 00:00 GMT+8 Release. Add 3 days for normie release.');
 	},
 };

@@ -1,0 +1,7 @@
+{
+    "CMD": "Commander", 
+    "LT": "Lieutenant",
+    "SGT": "Sergeant",
+    "AGT": "Agent",
+    "SOL": "Solitary Confinement"
+}

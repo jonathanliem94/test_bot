@@ -19,7 +19,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	client.user.setActivity('<activity>', { type: 'ACTIVE' });
+	client.user.setActivity('for subversive activity', { type: 'LISTENING' });
 
 	// COMMAND PARSING
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
