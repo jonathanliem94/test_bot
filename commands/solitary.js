@@ -14,7 +14,7 @@ module.exports = {
 			return message.reply('you need to tag a user in order to send them to solitary!');
 		}
 
-		if (author.roles.exists('name', AGT) || author.roles.exists('name', SOL)) {
+		if (!(author.roles.exists('name', CMD)) && !(author.roles.exists('name', LT))) {
 			return message.reply('Permission Denied.');
 		}
 

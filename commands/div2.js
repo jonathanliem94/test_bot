@@ -7,7 +7,7 @@ module.exports = {
 	cooldown: 25,
 	// eslint-disable-next-line no-unused-vars
 	execute(message, args) {
-		const releasedate = moment('2019-03-12 00:00:00');
+		const releasedate = moment('2019-03-11 21:00:00');
 
 		var difference;
 		var days;
@@ -15,20 +15,44 @@ module.exports = {
 		var minutes;
 
 		var now = moment();
-		difference = moment.duration(releasedate.diff(now));
 
-		// get number of days
-		days = difference.days();
+		if (moment(now).isAfter(releasedate)) {
+			const actualrelease = moment('2019-03-14 21:00:00');
 
-		// get number of hours
-		difference = difference.subtract(days, 'd');
-		hours = difference.get('hours');
+			if (moment(now).isAfter(actualrelease)) {
+				message.channel.send('The Division 2 has already released! Have fun, Agent!');
+			}
+			else {
+				difference = moment.duration(actualrelease.diff(now));
 
-		// get number of minutes
-		difference = difference.subtract(hours, 'h');
-		minutes = difference.get('minutes');
+				/* 		const dif = moment(now).to(releasedate);
+						console.log(dif); */
 
-		message.channel.send('The Division 2 is releasing in ' + days + ' days, ' + hours + ' hours, ' + minutes + ' minutes. \
-		Assuming 12 March 00:00 GMT+8 Release. Add 3 days for normie release.');
+				// get number of days
+				days = difference.days();
+				// get number of hours
+				hours = difference.hours();
+				// get number of minutes
+				minutes = difference.minutes();
+
+				message.channel.send('The Division 2 is PROPERLY releasing in ' + days + ' days, ' + hours + ' hours, ' + minutes + ' minutes.');
+			}
+
+		}
+		else {
+			difference = moment.duration(releasedate.diff(now));
+
+			/* 		const dif = moment(now).to(releasedate);
+					console.log(dif); */
+
+			// get number of days
+			days = difference.days();
+			// get number of hours
+			hours = difference.hours();
+			// get number of minutes
+			minutes = difference.minutes();
+
+			message.channel.send('The Division 2 is releasing in ' + days + ' days, ' + hours + ' hours, ' + minutes + ' minutes. EARLY access.');
+		}
 	},
 };

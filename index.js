@@ -18,8 +18,19 @@ client.once('ready', () => {
 	console.log('Reporting! o7');
 });
 
+// Create an event listener for new guild members
+/* client.on('guildMemberAdd', member => {
+	// Send the message to a designated channel on a server:
+	const channel = member.guild.channels.find(ch => ch.name === 'just-joined');
+	// Do nothing if the channel wasn't found on this server
+	if (!channel) return;
+	// Send the message, mentioning the member
+	channel.send(`Welcome to the server, ${member}`);
+}); */
+
+// LISTEN FOR MESSAGES
 client.on('message', message => {
-	client.user.setActivity('for subversive activity', { type: 'LISTENING' });
+	client.user.setActivity('for subversive activity', { type: 'WATCHING' });
 
 	// COMMAND PARSING
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
